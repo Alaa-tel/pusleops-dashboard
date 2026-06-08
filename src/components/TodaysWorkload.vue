@@ -75,7 +75,7 @@ const getStatusClass = (status: CaseStatus): string => {
 .workload {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .section-title {
@@ -88,19 +88,19 @@ const getStatusClass = (status: CaseStatus): string => {
 .workload-content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .workload-chart {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .workload-bar-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.375rem;
 }
 
 .bar-label {
@@ -110,19 +110,19 @@ const getStatusClass = (status: CaseStatus): string => {
 }
 
 .status-name {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--neutral-700);
 }
 
 .bar-count {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   color: var(--neutral-600);
 }
 
 .bar-container {
-  height: 24px;
+  height: 20px;
   background-color: var(--neutral-100);
   border-radius: var(--radius-sm);
   overflow: hidden;
@@ -168,14 +168,14 @@ const getStatusClass = (status: CaseStatus): string => {
 }
 
 .stat-value {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   font-weight: 700;
   color: var(--primary-color);
   margin: 0;
 }
 
 .stat-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--neutral-500);
   text-transform: uppercase;

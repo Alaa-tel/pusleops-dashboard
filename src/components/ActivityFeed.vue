@@ -74,7 +74,7 @@ const activities = [
 .activity-feed {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .feed-header {
@@ -91,11 +91,11 @@ const activities = [
 }
 
 .feed-badge {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   background-color: var(--neutral-100);
   color: var(--neutral-600);
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 9999px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -119,10 +119,10 @@ const activities = [
 }
 
 .activity-item {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   position: relative;
   display: flex;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   border-radius: var(--radius-md);
   transition: all 0.2s ease;
 }
@@ -132,8 +132,8 @@ const activities = [
 }
 
 .activity-marker {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   background-color: var(--primary-color);
   border: 3px solid white;
@@ -164,10 +164,10 @@ const activities = [
 }
 
 .activity-text {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--neutral-800);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .activity-actor {
@@ -180,26 +180,26 @@ const activities = [
 }
 
 .activity-meta {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--primary-color);
   font-weight: 600;
-  margin: 0.25rem 0 0 0;
+  margin: 0.2rem 0 0 0;
 }
 
 .activity-time {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--neutral-500);
-  margin: 0.5rem 0 0 0;
+  margin: 0.3rem 0 0 0;
 }
 
 .feed-footer {
-  padding-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
   border-top: 1px solid var(--neutral-200);
   text-align: center;
 }
 
 .view-all-link {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;

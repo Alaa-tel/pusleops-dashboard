@@ -26,11 +26,11 @@ defineProps<{
   background: white;
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-xl);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .metric-card:hover {
@@ -47,7 +47,7 @@ defineProps<{
 }
 
 .metric-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--neutral-500);
   margin: 0;
@@ -59,9 +59,9 @@ defineProps<{
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.375rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.375rem;
 }
 
@@ -85,7 +85,7 @@ defineProps<{
 }
 
 .metric-value {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--neutral-900);
   margin: 0;

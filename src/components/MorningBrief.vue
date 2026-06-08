@@ -20,30 +20,30 @@ const metrics = morningBriefData
 
 <style scoped>
 .morning-brief {
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   background: white;
   border-radius: var(--radius-xl);
   border: 1px solid var(--neutral-200);
 }
 
 .section-title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--neutral-900);
-  margin: 0 0 var(--spacing-xl) 0;
+  margin: 0 0 var(--spacing-md) 0;
   letter-spacing: -0.5px;
 }
 
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--spacing-xl);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
 }
 
 @media (max-width: 900px) {
   .metrics-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
   }
 }
 
@@ -54,7 +54,7 @@ const metrics = morningBriefData
 
   .section-title {
     font-size: 1.125rem;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
   }
 
   .metrics-grid {

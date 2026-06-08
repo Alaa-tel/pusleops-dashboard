@@ -118,16 +118,16 @@ const handleCaseSelected = (caseData: Case) => {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
   overflow-y: auto;
-  padding: var(--spacing-xl);
-  padding-right: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  padding-right: var(--spacing-md);
 }
 
 .dashboard-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
 }
 
 /* Right Panel */
@@ -144,7 +144,7 @@ const handleCaseSelected = (caseData: Case) => {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   overflow-y: auto;
   padding: var(--spacing-lg);
   padding-right: var(--spacing-md);

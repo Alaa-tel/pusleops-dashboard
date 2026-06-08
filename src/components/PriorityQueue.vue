@@ -142,10 +142,10 @@ const previousPage = () => {
   background: white;
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-xl);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-md);
 }
 
 .queue-header {
@@ -156,7 +156,7 @@ const previousPage = () => {
 }
 
 .section-title {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--neutral-900);
   margin: 0;
@@ -164,23 +164,23 @@ const previousPage = () => {
 }
 
 .section-subtitle {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--neutral-500);
-  margin: 0.25rem 0 0 0;
+  margin: 0.125rem 0 0 0;
 }
 
 .queue-controls {
   display: flex;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   flex-shrink: 0;
 }
 
 .filter-select {
-  padding: 0.625rem 0.875rem;
+  padding: 0.5rem 0.75rem;
   border: 1px solid var(--neutral-300);
   border-radius: var(--radius-lg);
   background: white;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--neutral-700);
   cursor: pointer;
@@ -209,11 +209,11 @@ const previousPage = () => {
 .table-header {
   display: grid;
   grid-template-columns: 2fr 1.2fr 1fr 1.2fr 0.8fr;
-  gap: var(--spacing-md);
-  padding: var(--spacing-lg);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
   background-color: var(--neutral-50);
   border-bottom: 1px solid var(--neutral-200);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -223,8 +223,8 @@ const previousPage = () => {
 .table-row {
   display: grid;
   grid-template-columns: 2fr 1.2fr 1fr 1.2fr 0.8fr;
-  gap: var(--spacing-md);
-  padding: var(--spacing-lg);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
   align-items: center;
   border-bottom: 1px solid var(--neutral-200);
   cursor: pointer;
@@ -240,27 +240,27 @@ const previousPage = () => {
 }
 
 .client-name {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
 
 .col-type {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--neutral-700);
 }
 
 .col-activity {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--neutral-600);
 }
 
 .status-badge {
   display: inline-block;
-  padding: 0.375rem 0.75rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 0.375rem;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -299,9 +299,9 @@ const previousPage = () => {
 
 .sla-pill {
   display: inline-block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.375rem 0.6rem;
   border-radius: 0.375rem;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-align: center;
   width: fit-content;
@@ -327,16 +327,16 @@ const previousPage = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-lg) 0;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
 }
 
 .pagination-btn {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   background: white;
   border: 1px solid var(--neutral-300);
   border-radius: var(--radius-lg);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--neutral-700);
   cursor: pointer;
@@ -354,7 +354,7 @@ const previousPage = () => {
 }
 
 .pagination-info {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--neutral-600);
   min-width: 100px;
@@ -364,10 +364,11 @@ const previousPage = () => {
 .view-all-link {
   text-align: center;
   color: var(--primary-color);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
+  margin-top: var(--spacing-sm);
 }
 
 .view-all-link:hover {

@@ -42,7 +42,7 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 .communication {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .comm-header {
@@ -62,27 +62,27 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 24px;
-  height: 24px;
-  padding: 0 0.5rem;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 0.4rem;
   background-color: var(--danger-color);
   color: white;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
 }
 
 .comm-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
 }
 
 .comm-item {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
   border-radius: var(--radius-md);
   background-color: var(--neutral-50);
   transition: all 0.2s ease;
@@ -95,11 +95,11 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 .comm-item.unread {
   background-color: rgba(14, 165, 233, 0.05);
   border-left: 3px solid var(--primary-color);
-  padding-left: calc(var(--spacing-md) - 3px);
+  padding-left: calc(var(--spacing-sm) - 3px);
 }
 
 .comm-icon {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   flex-shrink: 0;
 }
 
@@ -109,14 +109,14 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 }
 
 .comm-from {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   color: var(--neutral-900);
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.15rem 0;
 }
 
 .comm-subject {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--neutral-600);
   margin: 0;
   white-space: nowrap;
@@ -127,33 +127,34 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 .comm-time {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
   flex-shrink: 0;
 }
 
 .time-text {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--neutral-500);
   font-weight: 500;
 }
 
 .unread-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: var(--primary-color);
 }
 
 .view-all-btn {
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
   background-color: var(--neutral-100);
   border: 1px solid var(--neutral-200);
   border-radius: var(--radius-md);
   color: var(--neutral-700);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-top: var(--spacing-xs);
 }
 
 .view-all-btn:hover {

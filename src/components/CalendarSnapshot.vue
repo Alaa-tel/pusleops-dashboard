@@ -68,7 +68,7 @@ const events = [
 .calendar-snapshot {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .cal-header {
@@ -85,11 +85,11 @@ const events = [
 }
 
 .cal-badge {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   background-color: var(--info-light);
   color: var(--info-color);
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 9999px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -103,10 +103,10 @@ const events = [
 
 .event-item {
   display: grid;
-  grid-template-columns: auto 60px 1fr auto;
+  grid-template-columns: auto 55px 1fr auto;
   gap: var(--spacing-md);
   align-items: center;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   border-left: 3px solid var(--neutral-200);
   transition: all 0.2s ease;
@@ -123,8 +123,8 @@ const events = [
 }
 
 .event-time-indicator {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: transparent;
   position: relative;
@@ -132,15 +132,15 @@ const events = [
 
 .now-dot {
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: var(--primary-color);
   animation: pulse 2s infinite;
 }
 
 .event-time {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--neutral-600);
   white-space: nowrap;
@@ -151,24 +151,24 @@ const events = [
 }
 
 .event-title {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 .event-type {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--neutral-500);
-  margin: 0.25rem 0 0 0;
+  margin: 0.15rem 0 0 0;
 }
 
 .event-status {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   white-space: nowrap;
-  padding: 0.375rem 0.75rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 6px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -190,21 +190,22 @@ const events = [
 }
 
 .cal-footer {
-  padding-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
   border-top: 1px solid var(--neutral-200);
 }
 
 .add-event-btn {
   width: 100%;
-  padding: 0.625rem 1rem;
+  padding: 0.5rem 0.875rem;
   background-color: var(--neutral-100);
   border: 1px solid var(--neutral-300);
   border-radius: var(--radius-md);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--neutral-700);
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-top: var(--spacing-xs);
 }
 
 .add-event-btn:hover {

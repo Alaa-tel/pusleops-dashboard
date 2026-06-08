@@ -109,7 +109,7 @@ const members = [
 .team-pulse {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .tp-header {
@@ -126,11 +126,11 @@ const members = [
 }
 
 .tp-badge {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   background-color: var(--success-light);
   color: var(--success-color);
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 9999px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -139,8 +139,8 @@ const members = [
 .team-metrics {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
-  padding: var(--spacing-lg);
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
   background-color: var(--neutral-50);
   border-radius: var(--radius-md);
 }
@@ -148,14 +148,14 @@ const members = [
 .team-metric {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.375rem;
 }
 
 .metric-label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
 }
 
 .metric-name {
@@ -164,7 +164,7 @@ const members = [
 }
 
 .metric-unit {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--neutral-500);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -172,7 +172,7 @@ const members = [
 
 .metric-bar-container {
   width: 100%;
-  height: 6px;
+  height: 5px;
   background-color: var(--neutral-200);
   border-radius: 3px;
   overflow: hidden;
@@ -190,7 +190,7 @@ const members = [
 }
 
 .metric-value {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--neutral-600);
   text-align: right;
@@ -200,12 +200,12 @@ const members = [
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  padding-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
   border-top: 1px solid var(--neutral-200);
 }
 
 .members-title {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -216,7 +216,7 @@ const members = [
 .members-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .member-item {
@@ -224,7 +224,7 @@ const members = [
   grid-template-columns: auto 1fr auto;
   gap: var(--spacing-md);
   align-items: center;
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm);
   background-color: var(--neutral-50);
   border-radius: var(--radius-md);
   transition: all 0.2s ease;
@@ -235,15 +235,15 @@ const members = [
 }
 
 .member-avatar {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary-color), var(--info-color));
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   position: relative;
   flex-shrink: 0;
@@ -253,8 +253,8 @@ const members = [
   position: absolute;
   bottom: -2px;
   right: -2px;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: 2px solid white;
   background-color: var(--neutral-300);
@@ -273,22 +273,22 @@ const members = [
 }
 
 .member-name {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
 
 .member-role {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--neutral-500);
-  margin: 0.25rem 0 0 0;
+  margin: 0.15rem 0 0 0;
 }
 
 .member-status-badge {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.4rem;
   border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;

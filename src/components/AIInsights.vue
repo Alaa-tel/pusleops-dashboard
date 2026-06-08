@@ -80,7 +80,7 @@ const handleInsightAction = (action: any) => {
 .ai-insights {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .insights-header {
@@ -99,13 +99,13 @@ const handleInsightAction = (action: any) => {
 .refresh-btn {
   background: none;
   border: none;
-  font-size: 1.125rem;
+  font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
   opacity: 0.6;
   padding: 0;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,13 +135,13 @@ const handleInsightAction = (action: any) => {
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-md);
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
 }
 
 .spinner {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   border: 3px solid var(--neutral-200);
   border-top-color: var(--primary-color);
   border-radius: 50%;
@@ -149,7 +149,7 @@ const handleInsightAction = (action: any) => {
 }
 
 .insights-loading p {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--neutral-600);
   margin: 0;
 }
@@ -157,11 +157,11 @@ const handleInsightAction = (action: any) => {
 .insights-list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .insight-item {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
   background-color: var(--neutral-50);
   border-left: 3px solid;
   border-radius: var(--radius-md);
@@ -190,23 +190,24 @@ const handleInsightAction = (action: any) => {
 }
 
 .insight-icon {
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   flex-shrink: 0;
+  margin-top: 0.125rem;
 }
 
 .insight-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
 }
 
 .insight-text {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--neutral-800);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .insight-action {
@@ -214,7 +215,7 @@ const handleInsightAction = (action: any) => {
   background: none;
   border: none;
   color: var(--primary-color);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   cursor: pointer;
   padding: 0;
@@ -226,13 +227,13 @@ const handleInsightAction = (action: any) => {
 }
 
 .insights-footer {
-  padding-top: var(--spacing-md);
+  padding-top: var(--spacing-sm);
   border-top: 1px solid var(--neutral-200);
   text-align: center;
 }
 
 .view-all-link {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;

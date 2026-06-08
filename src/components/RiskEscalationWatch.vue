@@ -43,7 +43,7 @@ const getRiskReason = (caseItem: Case): string => {
 .risk-watch {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 
 .section-title {
@@ -56,7 +56,7 @@ const getRiskReason = (caseItem: Case): string => {
 .risk-items {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 .risk-item {
@@ -89,25 +89,25 @@ const getRiskReason = (caseItem: Case): string => {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.375rem;
 }
 
 .risk-icon {
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .risk-client {
   font-weight: 700;
   color: var(--neutral-900);
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.8625rem;
 }
 
 .risk-reason {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--neutral-600);
-  margin: 0 0 0.5rem 0;
-  line-height: 1.4;
+  margin: 0 0 0.375rem 0;
+  line-height: 1.3;
 }
 
 .risk-meta {
@@ -118,7 +118,7 @@ const getRiskReason = (caseItem: Case): string => {
 }
 
 .risk-label {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--neutral-500);
   text-transform: uppercase;
@@ -126,7 +126,7 @@ const getRiskReason = (caseItem: Case): string => {
 }
 
 .risk-time {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--warning-color);
 }
@@ -137,7 +137,7 @@ const getRiskReason = (caseItem: Case): string => {
   }
 
   .risk-client {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 }
 </style>
