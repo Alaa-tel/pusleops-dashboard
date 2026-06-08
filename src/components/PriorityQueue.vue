@@ -332,24 +332,30 @@ const previousPage = () => {
 }
 
 .pagination-btn {
-  padding: 0.4rem 0.8rem;
-  background: white;
+  padding: 0.35rem 0.75rem;
+  background: transparent;
   border: 1px solid var(--neutral-300);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--neutral-700);
+  color: var(--neutral-600);
   cursor: pointer;
   transition: all 0.2s ease;
+  height: 28px;
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background-color: var(--neutral-100);
+  background-color: var(--neutral-50);
   border-color: var(--neutral-400);
+  color: var(--neutral-700);
+}
+
+.pagination-btn:active:not(:disabled) {
+  background-color: var(--neutral-100);
 }
 
 .pagination-btn:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
@@ -369,10 +375,12 @@ const previousPage = () => {
   text-decoration: none;
   transition: all 0.2s ease;
   margin-top: var(--spacing-sm);
+  display: inline-block;
 }
 
 .view-all-link:hover {
   opacity: 0.8;
+  text-decoration: underline;
 }
 
 @media (max-width: 1000px) {

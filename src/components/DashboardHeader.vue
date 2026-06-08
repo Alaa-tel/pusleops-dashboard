@@ -154,22 +154,30 @@ const notificationCount = computed(() => notifications.length)
 
 .header-actions {
   display: flex;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md);
   align-items: center;
 }
 
 .notification-btn {
   position: relative;
-  background: none;
+  background: transparent;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  padding: var(--spacing-md);
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-600);
 }
 
 .notification-btn:hover {
-  transform: scale(1.1);
+  background-color: var(--neutral-100);
+  color: var(--neutral-800);
 }
 
 .badge {
@@ -178,14 +186,15 @@ const notificationCount = computed(() => notifications.length)
   right: 0;
   background-color: var(--danger-color);
   color: white;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid white;
 }
 
 .user-menu {
@@ -262,14 +271,22 @@ const notificationCount = computed(() => notifications.length)
 .close-btn {
   background: none;
   border: none;
-  font-size: 1.25rem;
-  color: var(--neutral-600);
+  font-size: 1.125rem;
+  color: var(--neutral-500);
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 0.375rem;
+  border-radius: var(--radius-md);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-btn:hover {
-  color: var(--neutral-900);
+  color: var(--neutral-700);
+  background-color: var(--neutral-100);
 }
 
 .notifications-list {

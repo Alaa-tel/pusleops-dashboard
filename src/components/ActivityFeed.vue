@@ -204,10 +204,12 @@ const activities = [
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s ease;
+  display: inline-block;
 }
 
 .view-all-link:hover {
   opacity: 0.8;
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {

@@ -196,21 +196,27 @@ const events = [
 
 .add-event-btn {
   width: 100%;
-  padding: 0.5rem 0.875rem;
-  background-color: var(--neutral-100);
+  padding: 0.45rem 0.875rem;
+  background-color: transparent;
   border: 1px solid var(--neutral-300);
   border-radius: var(--radius-md);
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--neutral-700);
+  color: var(--neutral-600);
   cursor: pointer;
   transition: all 0.2s ease;
   margin-top: var(--spacing-xs);
 }
 
 .add-event-btn:hover {
-  background-color: var(--neutral-200);
+  background-color: var(--neutral-50);
   border-color: var(--neutral-400);
+  color: var(--neutral-700);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.add-event-btn:active {
+  background-color: var(--neutral-100);
 }
 
 @media (max-width: 640px) {

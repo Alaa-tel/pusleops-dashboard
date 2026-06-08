@@ -220,10 +220,13 @@ const handleInsightAction = (action: any) => {
   cursor: pointer;
   padding: 0;
   transition: all 0.2s ease;
+  text-decoration: none;
+  margin-top: 0.125rem;
 }
 
 .insight-action:hover {
-  gap: var(--spacing-sm);
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 .insights-footer {
@@ -238,10 +241,12 @@ const handleInsightAction = (action: any) => {
   text-decoration: none;
   font-weight: 600;
   transition: all 0.2s ease;
+  display: inline-block;
 }
 
 .view-all-link:hover {
   opacity: 0.8;
+  text-decoration: underline;
 }
 
 @media (max-width: 640px) {

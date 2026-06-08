@@ -145,11 +145,12 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 }
 
 .view-all-btn {
-  padding: var(--spacing-sm) var(--spacing-md);
-  background-color: var(--neutral-100);
-  border: 1px solid var(--neutral-200);
+  width: 100%;
+  padding: 0.45rem 0.875rem;
+  background-color: transparent;
+  border: 1px solid var(--neutral-300);
   border-radius: var(--radius-md);
-  color: var(--neutral-700);
+  color: var(--neutral-600);
   font-size: 0.8125rem;
   font-weight: 600;
   cursor: pointer;
@@ -158,8 +159,14 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 }
 
 .view-all-btn:hover {
-  background-color: var(--neutral-200);
-  border-color: var(--neutral-300);
+  background-color: var(--neutral-50);
+  border-color: var(--neutral-400);
+  color: var(--neutral-700);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.view-all-btn:active {
+  background-color: var(--neutral-100);
 }
 
 @media (max-width: 640px) {

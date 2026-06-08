@@ -427,14 +427,22 @@ onUnmounted(() => {
 .close-btn {
   background: none;
   border: none;
-  color: var(--neutral-600);
+  color: var(--neutral-500);
   cursor: pointer;
   font-size: 1.125rem;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 0.375rem;
+  border-radius: var(--radius-md);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .close-btn:hover {
-  color: var(--neutral-900);
+  color: var(--neutral-700);
+  background-color: var(--neutral-100);
 }
 
 .queue-list {

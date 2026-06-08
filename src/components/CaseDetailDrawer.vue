@@ -434,25 +434,33 @@ const getActionButton = (): string => {
 }
 
 .drawer-footer {
-  padding: var(--spacing-lg) var(--spacing-xl);
+  padding: var(--spacing-lg) var(--spacing-lg);
   border-top: 1px solid var(--neutral-200);
-  background-color: var(--neutral-50);
+  background-color: white;
 }
 
 .close-btn {
   width: 100%;
-  padding: var(--spacing-md) var(--spacing-lg);
-  background-color: var(--neutral-200);
-  border: none;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--neutral-300);
   border-radius: var(--radius-md);
-  color: var(--neutral-700);
+  color: var(--neutral-600);
   font-weight: 600;
+  font-size: 0.8125rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .close-btn:hover {
-  background-color: var(--neutral-300);
+  background-color: var(--neutral-50);
+  border-color: var(--neutral-400);
+  color: var(--neutral-700);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.close-btn:active {
+  background-color: var(--neutral-100);
 }
 
 /* Scrollbar */
