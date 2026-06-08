@@ -1,8 +1,8 @@
 <template>
   <div class="ai-insights card">
     <div class="insights-header">
-      <h3 class="insights-title">🤖 PulseOps Assistant</h3>
-      <button class="refresh-btn" @click="refreshInsights" :disabled="isLoading">↻</button>
+      <h3 class="insights-title"><Zap :size="20" class="ai-icon" /> PulseOps Assistant</h3>
+      <button class="refresh-btn" @click="refreshInsights" :disabled="isLoading"><RotateCw :size="18" /></button>
     </div>
 
     <div v-if="isLoading" class="insights-loading">
@@ -12,7 +12,7 @@
 
     <div v-else class="insights-list">
       <div v-for="insight in insights" :key="insight.id" class="insight-item" :class="`priority-${insight.priority}`">
-        <span class="insight-icon">{{ insight.icon }}</span>
+        <component :is="insight.icon" class="insight-icon" :size="18" />
         <div class="insight-content">
           <p class="insight-text">{{ insight.text }}</p>
           <button v-if="insight.action" class="insight-action" @click="handleInsightAction(insight.action)">
@@ -30,37 +30,45 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { Zap, RotateCw, AlertTriangle, TrendingUp, MessageSquare, ArrowUp } from 'lucide-vue-next'
+import type { Component } from 'vue'
 
 const isLoading = ref(false)
 
-const insights = [
+interface Insight {
+  id: number
+  priority: 'critical' | 'high' | 'medium' | 'low'
+  icon: Component
+  text: string
+  action?: { label: string; id: string }
+}
+
+const insights: Insight[] = [
   {
     id: 1,
     priority: 'critical',
-    icon: '⚠️',
+    icon: AlertTriangle,
     text: '3 cases may miss SLA today',
     action: { label: 'Review cases', id: 'review-sla' }
   },
   {
     id: 2,
     priority: 'high',
-    icon: '📈',
+    icon: TrendingUp,
     text: 'Response times increased by 8% this week',
-    action: null
   },
   {
     id: 3,
     priority: 'medium',
-    icon: '💬',
+    icon: MessageSquare,
     text: 'Recommend contacting 2 waiting clients today',
     action: { label: 'Call now', id: 'call-waiting' }
   },
   {
     id: 4,
     priority: 'medium',
-    icon: '⬆️',
+    icon: ArrowUp,
     text: 'Escalation queue trending upward',
-    action: null
   },
 ]
 
@@ -94,12 +102,20 @@ const handleInsightAction = (action: any) => {
   font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.ai-icon {
+  color: var(--primary-color);
+  flex-shrink: 0;
+  stroke-width: 2;
 }
 
 .refresh-btn {
   background: none;
   border: none;
-  font-size: 1rem;
   cursor: pointer;
   transition: all 0.2s ease;
   opacity: 0.6;
@@ -109,6 +125,9 @@ const handleInsightAction = (action: any) => {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--neutral-600);
+  flex-shrink: 0;
+  stroke-width: 2;
 }
 
 .refresh-btn:hover:not(:disabled) {
@@ -191,9 +210,9 @@ const handleInsightAction = (action: any) => {
 }
 
 .insight-icon {
-  font-size: 1.375rem;
   flex-shrink: 0;
   margin-top: 0.125rem;
+  stroke-width: 2;
 }
 
 .insight-content {

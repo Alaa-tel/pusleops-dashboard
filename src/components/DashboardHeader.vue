@@ -3,7 +3,7 @@
     <div class="header-left">
       <div class="greeting-section">
         <h1 class="greeting-title">
-          Good morning, Jordan 👋
+          Good morning, Jordan
         </h1>
         <p class="greeting-subtitle">
           You have <strong>8 active cases</strong> today. 
@@ -22,12 +22,12 @@
           @focus="searchActive = true"
           @blur="searchActive = false"
         />
-        <span class="search-icon">🔍</span>
+        <Search class="search-icon" :size="20" />
       </div>
 
       <div class="header-actions">
         <button class="notification-btn" @click="showNotifications = !showNotifications">
-          <span class="icon">🔔</span>
+          <Bell class="icon" :size="20" />
           <span v-if="notificationCount > 0" class="badge">{{ notificationCount }}</span>
         </button>
         <div class="user-menu">
@@ -42,11 +42,11 @@
     <div v-if="showNotifications" class="notifications-panel">
       <div class="notifications-header">
         <h3>Notifications</h3>
-        <button class="close-btn" @click="showNotifications = false">✕</button>
+        <button class="close-btn" @click="showNotifications = false"><X :size="20" /></button>
       </div>
       <div class="notifications-list">
         <div v-for="notif in notifications" :key="notif.id" class="notification-item" :class="`notif-${notif.type}`">
-          <span class="notif-icon">{{ notif.icon }}</span>
+          <component :is="notif.icon" class="notif-icon" :size="18" />
           <div class="notif-content">
             <p class="notif-title">{{ notif.title }}</p>
             <p class="notif-time">{{ notif.time }}</p>
@@ -59,16 +59,26 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { Search, Bell, X, AlertCircle, Info, CheckCircle2, AlertTriangle } from 'lucide-vue-next'
+import type { Component } from 'vue'
 
 const showNotifications = ref(false)
 const searchActive = ref(false)
 
-const notifications = [
-  { id: 1, type: 'warning', icon: '⚠️', title: 'CASE-001 approaching SLA limit', time: '5 min ago' },
-  { id: 2, type: 'info', icon: 'ℹ️', title: 'New client document uploaded', time: '12 min ago' },
-  { id: 3, type: 'success', icon: '✓', title: 'Escalation #2156 resolved', time: '28 min ago' },
-  { id: 4, type: 'urgent', icon: '🚨', title: 'Case reassignment needed', time: '1 hour ago' },
-  { id: 5, type: 'info', icon: 'ℹ️', title: 'Team standup in 30 minutes', time: '1 hour ago' },
+interface Notification {
+  id: number
+  type: 'warning' | 'info' | 'success' | 'urgent'
+  icon: Component
+  title: string
+  time: string
+}
+
+const notifications: Notification[] = [
+  { id: 1, type: 'warning', icon: AlertCircle, title: 'CASE-001 approaching SLA limit', time: '5 min ago' },
+  { id: 2, type: 'info', icon: Info, title: 'New client document uploaded', time: '12 min ago' },
+  { id: 3, type: 'success', icon: CheckCircle2, title: 'Escalation #2156 resolved', time: '28 min ago' },
+  { id: 4, type: 'urgent', icon: AlertTriangle, title: 'Case reassignment needed', time: '1 hour ago' },
+  { id: 5, type: 'info', icon: Info, title: 'Team standup in 30 minutes', time: '1 hour ago' },
 ]
 
 const notificationCount = computed(() => notifications.length)
@@ -149,9 +159,9 @@ const notificationCount = computed(() => notifications.length)
   right: var(--spacing-lg);
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1rem;
   color: var(--neutral-500);
   pointer-events: none;
+  flex-shrink: 0;
 }
 
 .header-actions {
@@ -164,7 +174,6 @@ const notificationCount = computed(() => notifications.length)
   position: relative;
   background: transparent;
   border: none;
-  font-size: 1.125rem;
   cursor: pointer;
   transition: all 0.2s ease;
   padding: 0.5rem;
@@ -180,6 +189,11 @@ const notificationCount = computed(() => notifications.length)
 .notification-btn:hover {
   background-color: var(--neutral-100);
   color: var(--neutral-800);
+}
+
+.notification-btn .icon {
+  flex-shrink: 0;
+  stroke-width: 2;
 }
 
 .badge {
@@ -312,8 +326,8 @@ const notificationCount = computed(() => notifications.length)
 }
 
 .notif-icon {
-  font-size: 1.5rem;
   flex-shrink: 0;
+  stroke-width: 2;
 }
 
 .notif-content {

@@ -7,7 +7,7 @@
       @click="toggleCallQueue"
       :class="{ active: showCallQueue }"
     >
-      <span class="phone-icon">☎️</span>
+      <Phone class="phone-icon" :size="24" />
       <span v-if="pendingCallsCount > 0" class="call-badge">{{ pendingCallsCount }}</span>
     </button>
 
@@ -15,7 +15,7 @@
     <div v-if="showCallQueue && !showIncomingCall && !activeCall" class="call-queue-dropdown">
       <div class="queue-header">
         <p class="queue-title">Incoming Calls</p>
-        <button class="close-btn" @click="showCallQueue = false">✕</button>
+        <button class="close-btn" @click="showCallQueue = false"><X :size="20" /></button>
       </div>
       <div class="queue-list">
         <div
@@ -26,7 +26,7 @@
         >
           <div class="item-header">
             <p class="caller-name">{{ call.callerName }}</p>
-            <span v-if="hasRisk(call)" class="risk-indicator">⚠️</span>
+            <AlertCircle v-if="hasRisk(call)" class="risk-indicator" :size="18" />
           </div>
           <p class="caller-info">{{ call.phoneNumber }}</p>
           <p class="call-reason">{{ call.likelyReason }}</p>
@@ -76,19 +76,19 @@
 
         <div class="call-actions">
           <button class="action-btn accept-btn" @click="acceptCall">
-            <span class="btn-icon">✓</span>
+            <CheckCircle2 class="btn-icon" :size="18" />
             Accept Call
           </button>
           <button class="action-btn dismiss-btn" @click="dismissCall">
-            <span class="btn-icon">✕</span>
+            <XCircle class="btn-icon" :size="18" />
             Dismiss
           </button>
           <button class="action-btn secondary-btn" @click="viewProfile">
-            <span class="btn-icon">👤</span>
+            <User class="btn-icon" :size="18" />
             View Profile
           </button>
           <button class="action-btn secondary-btn" @click="startCase">
-            <span class="btn-icon">📋</span>
+            <FileText class="btn-icon" :size="18" />
             Start Case
           </button>
         </div>
@@ -156,11 +156,11 @@
 
       <div class="panel-footer">
         <button class="footer-btn secondary-btn" @click="createCase">
-          <span class="btn-icon">📋</span>
+          <ClipboardList class="btn-icon" :size="18" />
           Create Case
         </button>
         <button class="footer-btn end-call-btn" @click="endCall">
-          <span class="btn-icon">📞</span>
+          <PhoneOff class="btn-icon" :size="18" />
           End Call
         </button>
       </div>
@@ -181,6 +181,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { Phone, X, AlertCircle, CheckCircle2, XCircle, User, FileText, ClipboardList, PhoneOff } from 'lucide-vue-next'
 import { incomingCalls } from '../data-calls'
 import type { IncomingCall, ActiveCall } from '../types-call'
 
@@ -350,6 +351,8 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  stroke-width: 2;
 }
 
 .call-badge {
@@ -484,7 +487,9 @@ onUnmounted(() => {
 }
 
 .risk-indicator {
-  font-size: 1rem;
+  flex-shrink: 0;
+  stroke-width: 2;
+  color: var(--warning-color);
 }
 
 .caller-info {
@@ -669,7 +674,8 @@ onUnmounted(() => {
 }
 
 .btn-icon {
-  font-size: 1rem;
+  flex-shrink: 0;
+  stroke-width: 2;
 }
 
 /* Active Call Panel */

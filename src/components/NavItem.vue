@@ -4,17 +4,19 @@
     :class="{ active }"
     @click="$emit('click')"
   >
-    <span class="nav-icon">{{ item.icon }}</span>
+    <component :is="item.icon" class="nav-icon" :size="20" />
     <span class="nav-label">{{ item.label }}</span>
   </button>
 </template>
 
 <script setup lang="ts">
+import type { Component } from 'vue'
+
 defineProps<{
   item: {
     id: string
     label: string
-    icon: string
+    icon: Component
   }
   active: boolean
 }>()
@@ -56,7 +58,8 @@ defineEmits<{
 }
 
 .nav-icon {
-  font-size: 1.25rem;
+  flex-shrink: 0;
+  stroke-width: 2;
 }
 
 .nav-label {

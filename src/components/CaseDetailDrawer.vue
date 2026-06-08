@@ -3,7 +3,7 @@
     <div class="drawer" @click.stop>
       <div class="drawer-header">
         <h2 class="drawer-title">{{ caseData.clientName }}</h2>
-        <button class="close-button" @click="closeDrawer">✕</button>
+        <button class="close-button" @click="closeDrawer"><X :size="24" /></button>
       </div>
 
       <div class="drawer-content">
@@ -37,25 +37,25 @@
           <h3 class="section-label">Risk & Flags</h3>
           <div class="badges-group">
             <span v-if="caseData.riskLevel === 'critical'" class="badge badge-danger">
-              🚨 Critical Risk
+              <AlertTriangle :size="14" /> Critical Risk
             </span>
             <span v-else-if="caseData.riskLevel === 'high'" class="badge badge-warning">
-              ⚠ High Risk
+              <AlertCircle :size="14" /> High Risk
             </span>
             <span v-else-if="caseData.riskLevel === 'medium'" class="badge badge-info">
-              ℹ Medium Risk
+              <Info :size="14" /> Medium Risk
             </span>
             <span v-else class="badge badge-success">
-              ✓ Low Risk
+              <CheckCircle2 :size="14" /> Low Risk
             </span>
             <span v-if="caseData.reopened" class="badge badge-warning">
-              ↩ Reopened
+              <RotateCcw :size="14" /> Reopened
             </span>
             <span v-if="caseData.highValue" class="badge badge-info">
-              ⭐ High Value Client
+              <Star :size="14" /> High Value Client
             </span>
             <span v-if="caseData.complianceFlag" class="badge badge-danger">
-              🔒 Compliance Flag
+              <Lock :size="14" /> Compliance Flag
             </span>
           </div>
         </section>
@@ -133,6 +133,7 @@
 </template>
 
 <script setup lang="ts">
+import { X, AlertTriangle, AlertCircle, Info, CheckCircle2, RotateCcw, Star, Lock } from 'lucide-vue-next'
 import type { Case } from '../types'
 
 const props = defineProps<{

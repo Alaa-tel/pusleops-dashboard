@@ -16,18 +16,22 @@
           <p class="event-type">{{ event.type }}</p>
         </div>
         <div :class="['event-status', `status-${event.status}`]">
-          {{ event.status === 'active' ? '● Live' : event.status === 'upcoming' ? '→ Next' : '✓ Done' }}
+          <template v-if="event.status === 'active'"><Dot :size="6" /> Live</template>
+          <template v-else-if="event.status === 'upcoming'"><ArrowRight :size="14" /> Next</template>
+          <template v-else><Check :size="14" /> Done</template>
         </div>
       </div>
     </div>
 
     <div class="cal-footer">
-      <button class="add-event-btn">+ Schedule Event</button>
+      <button class="add-event-btn"><Plus :size="16" /> Schedule Event</button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Dot, ArrowRight, Check, Plus } from 'lucide-vue-next'
+
 const events = [
   {
     id: 1,

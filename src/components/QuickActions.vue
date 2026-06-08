@@ -7,18 +7,27 @@
       :class="index === 0 ? 'btn-primary' : 'btn-secondary'"
       @click="handleAction(action.id)"
     >
-      <span class="action-icon">{{ action.icon }}</span>
+      <component :is="action.icon" class="action-icon" :size="18" />
       <span class="action-text">{{ action.label }}</span>
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
-const actions = [
-  { id: 'new-case', label: 'New Case', icon: '📝' },
-  { id: 'call-client', label: 'Call Client', icon: '☎️' },
-  { id: 'review-docs', label: 'Review Documents', icon: '📄' },
-  { id: 'escalate', label: 'Escalate Case', icon: '⬆️' },
+import { FileText, Phone, FileUp, AlertTriangle } from 'lucide-vue-next'
+import type { Component } from 'vue'
+
+interface Action {
+  id: string
+  label: string
+  icon: Component
+}
+
+const actions: Action[] = [
+  { id: 'new-case', label: 'New Case', icon: FileText },
+  { id: 'call-client', label: 'Call Client', icon: Phone },
+  { id: 'review-docs', label: 'Review Documents', icon: FileUp },
+  { id: 'escalate', label: 'Escalate Case', icon: AlertTriangle },
 ]
 
 const handleAction = (actionId: string) => {
@@ -79,7 +88,8 @@ const handleAction = (actionId: string) => {
 }
 
 .action-icon {
-  font-size: 1.125rem;
+  flex-shrink: 0;
+  stroke-width: 2;
 }
 
 .action-text {

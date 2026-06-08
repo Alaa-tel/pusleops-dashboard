@@ -10,9 +10,9 @@
       >
         <div class="risk-header">
           <span class="risk-icon">
-            <span v-if="riskCase.riskLevel === 'critical'">🚨</span>
-            <span v-else-if="riskCase.riskLevel === 'high'">⚠️</span>
-            <span v-else>ℹ️</span>
+            <AlertTriangle v-if="riskCase.riskLevel === 'critical'" :size="18" />
+            <AlertCircle v-else-if="riskCase.riskLevel === 'high'" :size="18" />
+            <Info v-else :size="18" />
           </span>
           <p class="risk-client">{{ riskCase.clientName }}</p>
         </div>
@@ -27,6 +27,7 @@
 </template>
 
 <script setup lang="ts">
+import { AlertTriangle, AlertCircle, Info } from 'lucide-vue-next'
 import { riskCases } from '../data'
 import type { Case } from '../types'
 
@@ -93,7 +94,10 @@ const getRiskReason = (caseItem: Case): string => {
 }
 
 .risk-icon {
-  font-size: 1rem;
+  flex-shrink: 0;
+  stroke-width: 2;
+  display: flex;
+  align-items: center;
 }
 
 .risk-client {

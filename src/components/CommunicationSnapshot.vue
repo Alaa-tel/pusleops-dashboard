@@ -13,8 +13,8 @@
         :class="{ unread: comm.unread }"
       >
         <div class="comm-icon">
-          <span v-if="comm.type === 'email'">✉️</span>
-          <span v-else>📝</span>
+          <Mail v-if="comm.type === 'email'" :size="18" />
+          <FileText v-else :size="18" />
         </div>
         <div class="comm-content">
           <p class="comm-from">{{ comm.from }}</p>
@@ -33,6 +33,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { Mail, FileText } from 'lucide-vue-next'
 import { sampleCommunications } from '../data'
 
 const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).length)

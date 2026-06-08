@@ -2,7 +2,7 @@
   <div class="sidebar-rail">
     <div class="rail-header">
       <div class="logo">
-        <div class="logo-icon">📊</div>
+        <BarChart3 class="logo-icon" :size="28" />
         <span class="logo-text">PulseOps</span>
       </div>
     </div>
@@ -31,19 +31,20 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { BarChart3, ClipboardList, Users, CheckCircle2, Mail, Briefcase, BookOpen, Settings } from 'lucide-vue-next'
 import NavItem from './NavItem.vue'
 
 const activeNav = ref('dashboard')
 
 const navItems = [
-  { id: 'dashboard', label: 'Dashboard', icon: '📊' },
-  { id: 'cases', label: 'Cases', icon: '📋' },
-  { id: 'clients', label: 'Clients', icon: '👥' },
-  { id: 'tasks', label: 'Tasks', icon: '✓' },
-  { id: 'communications', label: 'Communications', icon: '✉️' },
-  { id: 'team', label: 'Team Insights', icon: '👨‍💼' },
-  { id: 'knowledge', label: 'Knowledge Base', icon: '📚' },
-  { id: 'settings', label: 'Settings', icon: '⚙️' },
+  { id: 'dashboard', label: 'Dashboard', icon: BarChart3 },
+  { id: 'cases', label: 'Cases', icon: ClipboardList },
+  { id: 'clients', label: 'Clients', icon: Users },
+  { id: 'tasks', label: 'Tasks', icon: CheckCircle2 },
+  { id: 'communications', label: 'Communications', icon: Mail },
+  { id: 'team', label: 'Team Insights', icon: Briefcase },
+  { id: 'knowledge', label: 'Knowledge Base', icon: BookOpen },
+  { id: 'settings', label: 'Settings', icon: Settings },
 ]
 </script>
 
@@ -72,7 +73,9 @@ const navItems = [
 }
 
 .logo-icon {
-  font-size: 1.75rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+  stroke-width: 2;
 }
 
 .logo-text {
