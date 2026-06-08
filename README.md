@@ -51,6 +51,14 @@ A modern, professional operational dashboard built with Vue 3 and TypeScript for
    - Recommended actions with quick buttons
    - Notes and timeline
 
+8. **Call Widget** - Floating phone interface for incoming calls:
+   - Floating phone button in bottom-right corner with call count badge
+   - Call queue showing pending incoming calls
+   - Incoming call card with caller info, client context, and risk flags
+   - Active call panel with call timer, notes field, and suggested actions
+   - Minimize/expand functionality to work while on calls
+   - Smooth transitions and visual hierarchy
+
 ## 🛠 Tech Stack
 
 - **Vue 3** - Progressive JavaScript framework
@@ -70,10 +78,13 @@ src/
 │   ├── RiskEscalationWatch.vue # Risk panel
 │   ├── TodaysWorkload.vue      # Workload visuals
 │   ├── CommunicationSnapshot.vue # Messages
-│   └── CaseDetailDrawer.vue    # Case detail slide-out
+│   ├── CaseDetailDrawer.vue    # Case detail slide-out
+│   └── CallWidget.vue          # Incoming/active call interface
 ├── App.vue              # Root component
 ├── types.ts             # TypeScript interfaces
-├── data.ts              # Sample/mock data
+├── types-call.ts        # Call-related interfaces
+├── data.ts              # Sample case data
+├── data-calls.ts        # Sample call data
 ├── style.css            # Global styles
 └── main.ts              # Entry point
 ```
@@ -150,6 +161,15 @@ Data is defined in `src/data.ts` and can be easily connected to a real backend A
 - **Review activity timeline**
 - **Close drawer** with X button or overlay click
 
+### Call Widget
+- **Floating phone button** - Shows pending call count with pulsing badge
+- **Call queue dropdown** - Browse incoming calls with risk indicators
+- **Incoming call card** - Full caller details and quick actions
+- **Accept call** - Transitions to active call panel
+- **Active call panel** - Call timer, client context, notes field, suggested actions
+- **Minimize/expand** - Collapse call widget to work on dashboard while on call
+- **End call** - Close call and return to queue
+
 ### Responsive Design
 - **Desktop**: Full layout with side-by-side panels
 - **Tablet**: 2-column layout with stacked sections
@@ -176,10 +196,17 @@ To extend this dashboard:
    - WebSocket for case status changes
    - Polling for new communications
 
-3. **Implement Call Widget**
-   - Add floating phone button
-   - Incoming call notifications
-   - Call timer and notes
+3. **Enhance Call Widget** ✅ *Already Implemented*
+   - ✓ Floating phone button with call count
+   - ✓ Incoming call notifications and queue
+   - ✓ Call timer and notes field
+   - **Future enhancements**:
+   - Call recording indicator
+   - Transfer/conference options
+   - Voicemail management
+   - Call history and analytics
+   - Profile auto-pop screen
+   - See `CALL_WIDGET_DOCS.md` for details
 
 4. **Add Team Pulse Section**
    - Team-wide metrics
@@ -193,11 +220,13 @@ To extend this dashboard:
 
 ## 📝 Notes
 
-- All data is currently mock/sample data in `src/data.ts`
+- All data is currently mock/sample data in `src/data.ts` and `src/data-calls.ts`
 - No backend or database is required to run the app
 - Styling is responsive and mobile-friendly
 - The drawer overlay blocks background interaction while open
-- Smooth animations for drawer open/close
+- Call widget floats above all content (z-index: 999)
+- Smooth animations for all transitions
+- See `CALL_WIDGET_DOCS.md` for complete call widget documentation
 
 ## 📄 License
 

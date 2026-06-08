@@ -17,6 +17,7 @@
       </div>
     </div>
     <CaseDetailDrawer v-if="selectedCase" :case-data="selectedCase" @close="selectedCase = null" />
+    <CallWidget />
   </div>
 </template>
 
@@ -30,6 +31,7 @@ import RiskEscalationWatch from './components/RiskEscalationWatch.vue'
 import TodaysWorkload from './components/TodaysWorkload.vue'
 import CommunicationSnapshot from './components/CommunicationSnapshot.vue'
 import CaseDetailDrawer from './components/CaseDetailDrawer.vue'
+import CallWidget from './components/CallWidget.vue'
 
 const selectedCase = ref<Case | null>(null)
 
