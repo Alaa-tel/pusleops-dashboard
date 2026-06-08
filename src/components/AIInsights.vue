@@ -91,7 +91,7 @@ const handleInsightAction = (action: any) => {
 
 .insights-title {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
@@ -150,6 +150,7 @@ const handleInsightAction = (action: any) => {
 
 .insights-loading p {
   font-size: 0.8125rem;
+  font-weight: 400;
   color: var(--neutral-600);
   margin: 0;
 }

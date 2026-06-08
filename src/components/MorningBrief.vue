@@ -28,10 +28,10 @@ const metrics = morningBriefData
 
 .section-title {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0 0 var(--spacing-md) 0;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.125px;
 }
 
 .metrics-grid {

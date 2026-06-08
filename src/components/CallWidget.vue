@@ -416,8 +416,8 @@ onUnmounted(() => {
 }
 
 .queue-title {
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
   text-transform: uppercase;
@@ -478,7 +478,7 @@ onUnmounted(() => {
 
 .caller-name {
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
@@ -489,13 +489,14 @@ onUnmounted(() => {
 
 .caller-info {
   font-size: 0.75rem;
+  font-weight: 400;
   color: var(--neutral-600);
   margin: 0.25rem 0;
-  font-weight: 500;
 }
 
 .call-reason {
   font-size: 0.75rem;
+  font-weight: 400;
   color: var(--neutral-700);
   margin: 0.5rem 0 0 0;
   line-height: 1.3;
@@ -503,9 +504,9 @@ onUnmounted(() => {
 
 .call-time {
   font-size: 0.7rem;
+  font-weight: 400;
   color: var(--neutral-500);
   margin: 0.5rem 0 0 0;
-  font-weight: 500;
 }
 
 .empty-state {
@@ -567,12 +568,13 @@ onUnmounted(() => {
 
 .caller-info-section .caller-name {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 0.25rem 0;
 }
 
 .phone-number {
   font-size: 0.875rem;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
@@ -594,15 +596,15 @@ onUnmounted(() => {
 
 .detail-label {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--neutral-600);
+  color: var(--neutral-500);
 }
 
 .detail-value {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--neutral-800);
 }
 
@@ -771,7 +773,7 @@ onUnmounted(() => {
 }
 
 .active-name {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
   font-size: 0.9375rem;
@@ -779,6 +781,7 @@ onUnmounted(() => {
 
 .active-number {
   font-size: 0.8125rem;
+  font-weight: 400;
   color: var(--neutral-600);
   margin: 0.25rem 0 0 0;
 }
@@ -793,10 +796,10 @@ onUnmounted(() => {
 .context-title,
 .actions-title {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--neutral-600);
+  color: var(--neutral-500);
   margin: 0;
 }
 
@@ -814,6 +817,7 @@ onUnmounted(() => {
   background-color: var(--neutral-50);
   border-radius: var(--radius-sm);
   font-size: 0.8125rem;
+  font-weight: 400;
 }
 
 .context-label {
@@ -832,6 +836,7 @@ onUnmounted(() => {
 
 .actions-list li {
   font-size: 0.8125rem;
+  font-weight: 400;
   color: var(--neutral-700);
   padding: 0.5rem 0.75rem;
   background-color: var(--neutral-50);
@@ -847,10 +852,10 @@ onUnmounted(() => {
 
 .notes-label {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--neutral-600);
+  color: var(--neutral-500);
 }
 
 .notes-input {
@@ -859,6 +864,7 @@ onUnmounted(() => {
   border-radius: var(--radius-md);
   font-family: inherit;
   font-size: 0.8125rem;
+  font-weight: 400;
   color: var(--neutral-800);
   resize: vertical;
   transition: all 0.2s ease;
@@ -933,12 +939,13 @@ onUnmounted(() => {
 
 .minimized-name {
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0;
 }
 
 .minimized-timer {
   font-size: 0.75rem;
+  font-weight: 400;
   font-family: 'Courier New', monospace;
   opacity: 0.9;
 }

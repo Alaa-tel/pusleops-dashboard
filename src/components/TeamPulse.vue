@@ -120,14 +120,14 @@ const members = [
 
 .tp-title {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
 
 .tp-badge {
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--success-light);
   color: var(--success-color);
   padding: 0.2rem 0.6rem;
@@ -156,6 +156,7 @@ const members = [
   justify-content: space-between;
   align-items: center;
   font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .metric-name {
@@ -165,6 +166,7 @@ const members = [
 
 .metric-unit {
   font-size: 0.7rem;
+  font-weight: 500;
   color: var(--neutral-500);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -192,7 +194,7 @@ const members = [
 .metric-value {
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--neutral-600);
+  color: var(--neutral-700);
   text-align: right;
 }
 
@@ -281,13 +283,14 @@ const members = [
 
 .member-role {
   font-size: 0.7rem;
+  font-weight: 400;
   color: var(--neutral-500);
   margin: 0.15rem 0 0 0;
 }
 
 .member-status-badge {
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   text-transform: uppercase;

@@ -85,16 +85,16 @@ const activities = [
 
 .feed-title {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
 
 .feed-badge {
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--neutral-100);
-  color: var(--neutral-600);
+  color: var(--neutral-500);
   padding: 0.2rem 0.6rem;
   border-radius: 9999px;
   text-transform: uppercase;
@@ -165,29 +165,32 @@ const activities = [
 
 .activity-text {
   font-size: 0.8125rem;
-  color: var(--neutral-800);
+  font-weight: 400;
+  color: var(--neutral-700);
   margin: 0;
   line-height: 1.3;
 }
 
 .activity-actor {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
 }
 
 .activity-action {
-  color: var(--neutral-700);
+  color: var(--neutral-600);
+  font-weight: 400;
 }
 
 .activity-meta {
   font-size: 0.75rem;
+  font-weight: 500;
   color: var(--primary-color);
-  font-weight: 600;
   margin: 0.2rem 0 0 0;
 }
 
 .activity-time {
   font-size: 0.7rem;
+  font-weight: 400;
   color: var(--neutral-500);
   margin: 0.3rem 0 0 0;
 }

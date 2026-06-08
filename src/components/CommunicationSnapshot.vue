@@ -53,7 +53,7 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 
 .section-title {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
@@ -69,7 +69,7 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
   color: white;
   border-radius: 9999px;
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .comm-list {
@@ -110,13 +110,14 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 
 .comm-from {
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0 0 0.15rem 0;
 }
 
 .comm-subject {
   font-size: 0.75rem;
+  font-weight: 400;
   color: var(--neutral-600);
   margin: 0;
   white-space: nowrap;
@@ -133,6 +134,7 @@ const unreadCount = computed(() => sampleCommunications.filter((c) => c.unread).
 
 .time-text {
   font-size: 0.7rem;
+  font-weight: 400;
   color: var(--neutral-500);
   font-weight: 500;
 }

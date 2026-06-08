@@ -220,7 +220,7 @@ const getActionButton = (): string => {
 
 .drawer-title {
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
@@ -261,11 +261,11 @@ const getActionButton = (): string => {
 }
 
 .section-label {
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--neutral-600);
+  color: var(--neutral-500);
   margin: 0;
 }
 
@@ -283,30 +283,30 @@ const getActionButton = (): string => {
 }
 
 .info-label {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--neutral-600);
 }
 
 .info-value {
   font-size: 0.9375rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--neutral-800);
 }
 
 .info-value.critical {
   color: var(--danger-color);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .info-value.warning {
   color: var(--warning-color);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .info-value.healthy {
   color: var(--success-color);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .status-new {
@@ -349,7 +349,7 @@ const getActionButton = (): string => {
 
 .action-text {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--primary-color);
   margin: 0 0 var(--spacing-lg) 0;
 }
@@ -364,7 +364,7 @@ const getActionButton = (): string => {
   padding: var(--spacing-md) var(--spacing-lg);
   border: none;
   border-radius: var(--radius-md);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -390,6 +390,7 @@ const getActionButton = (): string => {
 
 .notes-text {
   font-size: 0.9375rem;
+  font-weight: 400;
   color: var(--neutral-700);
   line-height: 1.6;
   margin: 0;
@@ -429,6 +430,7 @@ const getActionButton = (): string => {
 
 .timeline-time {
   font-size: 0.75rem;
+  font-weight: 400;
   color: var(--neutral-500);
   margin: 0.25rem 0 0 0;
 }

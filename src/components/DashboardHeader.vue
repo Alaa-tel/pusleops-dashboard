@@ -101,10 +101,12 @@ const notificationCount = computed(() => notifications.length)
   font-weight: 700;
   color: var(--neutral-900);
   margin: 0;
+  letter-spacing: -0.5px;
 }
 
 .greeting-subtitle {
   font-size: 0.9375rem;
+  font-weight: 400;
   color: var(--neutral-600);
   margin: 0;
   line-height: 1.6;
@@ -112,7 +114,7 @@ const notificationCount = computed(() => notifications.length)
 
 .highlight {
   color: var(--primary-color);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .header-right {

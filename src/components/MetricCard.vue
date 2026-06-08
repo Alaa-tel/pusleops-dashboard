@@ -48,7 +48,7 @@ defineProps<{
 
 .metric-label {
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-500);
   margin: 0;
   text-transform: uppercase;
@@ -59,8 +59,8 @@ defineProps<{
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 500;
   padding: 0.25rem 0.5rem;
   border-radius: 0.375rem;
 }
@@ -81,11 +81,11 @@ defineProps<{
 }
 
 .trend-icon {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .metric-value {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--neutral-900);
   margin: 0;

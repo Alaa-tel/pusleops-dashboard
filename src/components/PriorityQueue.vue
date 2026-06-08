@@ -157,14 +157,15 @@ const previousPage = () => {
 
 .section-title {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.125px;
 }
 
 .section-subtitle {
   font-size: 0.75rem;
+  font-weight: 500;
   color: var(--neutral-500);
   margin: 0.125rem 0 0 0;
 }
@@ -214,10 +215,10 @@ const previousPage = () => {
   background-color: var(--neutral-50);
   border-bottom: 1px solid var(--neutral-200);
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--neutral-600);
+  color: var(--neutral-500);
 }
 
 .table-row {
@@ -240,19 +241,21 @@ const previousPage = () => {
 }
 
 .client-name {
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
 
 .col-type {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--neutral-700);
 }
 
 .col-activity {
   font-size: 0.8125rem;
+  font-weight: 400;
   color: var(--neutral-600);
 }
 

@@ -48,7 +48,7 @@ const getRiskReason = (caseItem: Case): string => {
 
 .section-title {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
@@ -97,7 +97,7 @@ const getRiskReason = (caseItem: Case): string => {
 }
 
 .risk-client {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
   font-size: 0.8625rem;
@@ -105,7 +105,8 @@ const getRiskReason = (caseItem: Case): string => {
 
 .risk-reason {
   font-size: 0.8125rem;
-  color: var(--neutral-600);
+  font-weight: 400;
+  color: var(--neutral-700);
   margin: 0 0 0.375rem 0;
   line-height: 1.3;
 }
@@ -127,7 +128,7 @@ const getRiskReason = (caseItem: Case): string => {
 
 .risk-time {
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--warning-color);
 }
 

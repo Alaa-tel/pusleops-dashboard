@@ -79,14 +79,14 @@ const events = [
 
 .cal-title {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
 }
 
 .cal-badge {
   font-size: 0.7rem;
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--info-light);
   color: var(--info-color);
   padding: 0.2rem 0.6rem;
@@ -141,7 +141,7 @@ const events = [
 
 .event-time {
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-600);
   white-space: nowrap;
 }
@@ -160,6 +160,7 @@ const events = [
 
 .event-type {
   font-size: 0.7rem;
+  font-weight: 400;
   color: var(--neutral-500);
   margin: 0.15rem 0 0 0;
 }

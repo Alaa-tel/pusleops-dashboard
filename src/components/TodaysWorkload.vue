@@ -80,9 +80,10 @@ const getStatusClass = (status: CaseStatus): string => {
 
 .section-title {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--neutral-900);
   margin: 0;
+  letter-spacing: -0.125px;
 }
 
 .workload-content {
@@ -112,13 +113,13 @@ const getStatusClass = (status: CaseStatus): string => {
 .status-name {
   font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--neutral-700);
+  color: var(--neutral-600);
 }
 
 .bar-count {
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: var(--neutral-600);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--neutral-700);
 }
 
 .bar-container {
@@ -168,10 +169,11 @@ const getStatusClass = (status: CaseStatus): string => {
 }
 
 .stat-value {
-  font-size: 1.375rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
   margin: 0;
+  line-height: 1;
 }
 
 .stat-label {
