@@ -19,6 +19,13 @@
 
           <!-- Priority Queue (Main Focus) -->
           <PriorityQueue @case-selected="handleCaseSelected" />
+
+          <!-- Second Row: Workload, Activity, Communication -->
+          <div class="dashboard-row">
+            <TodaysWorkload />
+            <ActivityFeed />
+            <CommunicationSnapshot />
+          </div>
         </div>
       </div>
 
@@ -28,9 +35,6 @@
           <!-- AI Insights -->
           <AIInsights />
 
-          <!-- Activity Feed -->
-          <ActivityFeed />
-
           <!-- Calendar Snapshot -->
           <CalendarSnapshot />
 
@@ -39,12 +43,6 @@
 
           <!-- Risk Escalation Watch -->
           <RiskEscalationWatch />
-
-          <!-- Today's Workload -->
-          <TodaysWorkload />
-
-          <!-- Communication Snapshot -->
-          <CommunicationSnapshot />
         </div>
       </div>
     </div>
@@ -126,6 +124,12 @@ const handleCaseSelected = (caseData: Case) => {
   padding-right: var(--spacing-lg);
 }
 
+.dashboard-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
 /* Right Panel */
 .right-panel {
   display: flex;
@@ -183,6 +187,11 @@ const handleCaseSelected = (caseData: Case) => {
     padding: var(--spacing-lg);
     gap: var(--spacing-lg);
   }
+
+  .dashboard-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
 }
 
 /* Mobile Responsive */
@@ -206,36 +215,10 @@ const handleCaseSelected = (caseData: Case) => {
     padding: var(--spacing-lg);
     gap: var(--spacing-lg);
   }
-}
 
-/* Responsive design */
-@media (max-width: 1400px) {
-  .content-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-    padding: var(--spacing-lg);
-  }
-}
-
-@media (max-width: 900px) {
-  .content-grid {
+  .dashboard-row {
     grid-template-columns: 1fr;
-  }
-
-  .right-column {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
-  }
-}
-
-@media (max-width: 640px) {
-  .content-grid {
-    padding: var(--spacing-md);
-  }
-
-  .right-column {
-    grid-template-columns: 1fr;
   }
 }
 </style>

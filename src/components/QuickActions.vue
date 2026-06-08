@@ -28,56 +28,87 @@ const handleAction = (actionId: string) => {
 
 <style scoped>
 .quick-actions {
-  display: flex;
-  gap: var(--spacing-md);
-  padding: 0 var(--spacing-xl) var(--spacing-xl);
-  background: white;
-  border-bottom: 1px solid var(--neutral-200);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-lg);
 }
 
 .action-btn {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-md) var(--spacing-lg);
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(6, 182, 212, 0.05));
-  border: 1px solid rgba(14, 165, 233, 0.2);
-  border-radius: var(--radius-md);
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 0.875rem;
+  justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  color: var(--neutral-900);
+  font-weight: 700;
+  font-size: 0.9375rem;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.action-btn:hover {
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(6, 182, 212, 0.15));
+.action-btn:nth-child(1) {
   border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.action-btn:nth-child(2) {
+  border-color: var(--info-color);
+  color: var(--info-color);
+}
+
+.action-btn:nth-child(3) {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
+
+.action-btn:nth-child(4) {
+  border-color: var(--warning-color);
+  color: var(--warning-color);
+}
+
+.action-btn:hover {
+  border-width: 2px;
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn:nth-child(1):hover {
+  background-color: rgba(14, 165, 233, 0.05);
+}
+
+.action-btn:nth-child(2):hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.action-btn:nth-child(3):hover {
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.action-btn:nth-child(4):hover {
+  background-color: rgba(245, 158, 11, 0.05);
 }
 
 .action-icon {
-  font-size: 1.125rem;
+  font-size: 1.75rem;
 }
 
 .action-text {
   white-space: nowrap;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
   .quick-actions {
-    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
   }
 
   .action-btn {
-    flex-direction: column;
     padding: var(--spacing-md);
-    font-size: 0.75rem;
-  }
-
-  .action-text {
-    display: none;
   }
 }
 

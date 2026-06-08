@@ -39,10 +39,13 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: var(--neutral-50);
   color: var(--neutral-800);
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html, body, #app {
@@ -54,10 +57,11 @@ html, body, #app {
 
 .card {
   background: white;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   border: 1px solid var(--neutral-200);
-  box-shadow: var(--shadow-sm);
-  padding: var(--spacing-lg);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: var(--spacing-xl);
+  transition: all 0.2s ease;
 }
 
 .card-hover {

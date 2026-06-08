@@ -23,50 +23,61 @@ defineProps<{
 
 <style scoped>
 .metric-card {
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(6, 182, 212, 0.08));
-  border: 1px solid rgba(14, 165, 233, 0.2);
-  border-radius: var(--radius-lg);
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
   padding: var(--spacing-lg);
   transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
 
 .metric-card:hover {
-  border-color: var(--primary-color);
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
+  border-color: var(--neutral-300);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
 }
 
 .metric-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-md);
 }
 
 .metric-label {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--neutral-600);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--neutral-500);
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .trend {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
 }
 
 .trend.up {
+  background-color: rgba(16, 185, 129, 0.1);
   color: var(--success-color);
 }
 
 .trend.down {
+  background-color: rgba(245, 158, 11, 0.1);
   color: var(--warning-color);
 }
 
 .trend.stable {
-  color: var(--neutral-500);
+  background-color: var(--neutral-100);
+  color: var(--neutral-600);
 }
 
 .trend-icon {
@@ -74,10 +85,12 @@ defineProps<{
 }
 
 .metric-value {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--neutral-900);
   margin: 0;
+  line-height: 1;
+  letter-spacing: -0.5px;
 }
 
 @media (max-width: 640px) {
@@ -86,7 +99,7 @@ defineProps<{
   }
 
   .metric-value {
-    font-size: 1.5rem;
+    font-size: 1.625rem;
   }
 }
 </style>
