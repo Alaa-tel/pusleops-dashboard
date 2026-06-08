@@ -47,6 +47,9 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Enhanced typography for Inter font */
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  text-rendering: optimizeLegibility;
 }
 
 html, body, #app {
@@ -56,6 +59,24 @@ html, body, #app {
 
 /* Typography Hierarchy Utilities */
 
+/* Display Level - Page Titles */
+.display-lg {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.75px;
+  color: var(--neutral-900);
+  line-height: 1.1;
+}
+
+.display-md {
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--neutral-900);
+  line-height: 1.15;
+}
+
+/* Heading Level - Section Titles */
 .heading-lg {
   font-size: 1.875rem;
   font-weight: 700;
@@ -80,11 +101,30 @@ html, body, #app {
   line-height: 1.3;
 }
 
+.heading-xs {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--neutral-900);
+  line-height: 1.4;
+}
+
+/* Subheading Level - Card/Section Subtitles */
+.subheading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--neutral-800);
+  line-height: 1.4;
+}
+
+/* Body Text - Main Content */
 .body-lg {
   font-size: 0.9375rem;
   font-weight: 400;
   color: var(--neutral-700);
   line-height: 1.6;
+  letter-spacing: 0;
 }
 
 .body-md {
@@ -92,6 +132,7 @@ html, body, #app {
   font-weight: 400;
   color: var(--neutral-700);
   line-height: 1.5;
+  letter-spacing: 0;
 }
 
 .body-sm {
@@ -99,6 +140,7 @@ html, body, #app {
   font-weight: 400;
   color: var(--neutral-600);
   line-height: 1.4;
+  letter-spacing: 0;
 }
 
 .label {
@@ -116,6 +158,106 @@ html, body, #app {
   letter-spacing: 0.25px;
   color: var(--neutral-400);
   line-height: 1;
+}
+
+/* Additional Typography Utilities */
+
+/* Text Weights */
+.font-thin {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--neutral-600);
+}
+
+.text-muted {
+  color: var(--neutral-500);
+  font-weight: 400;
+}
+
+.text-success {
+  color: var(--success-color);
+}
+
+.text-warning {
+  color: var(--warning-color);
+}
+
+.text-danger {
+  color: var(--danger-color);
+}
+
+.text-info {
+  color: var(--info-color);
+}
+
+/* Text Sizes Quick Classes */
+.text-xs {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.text-base {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+/* Emphasis Classes */
+.text-emphasis {
+  font-weight: 600;
+}
+
+.text-de-emphasis {
+  color: var(--neutral-500);
+}
+
+/* Line Height */
+.leading-tight {
+  line-height: 1.2;
+}
+
+.leading-normal {
+  line-height: 1.4;
+}
+
+.leading-relaxed {
+  line-height: 1.6;
 }
 
 /* Global component styles */
@@ -148,10 +290,12 @@ html, body, #app {
   border-radius: var(--radius-md);
   font-size: 0.8125rem;
   font-weight: 600;
+  letter-spacing: 0;
   cursor: pointer;
   transition: all 0.15s ease;
   text-decoration: none;
   height: 32px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .button-primary {
@@ -216,6 +360,8 @@ html, body, #app {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .badge-warning {
@@ -298,4 +444,81 @@ html, body, #app {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+/* Form Elements - Typography Consistency */
+input,
+textarea,
+select {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--neutral-700);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--neutral-400);
+  font-weight: 400;
+}
+
+/* Typography for specific elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--neutral-900);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.75px;
+}
+
+h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.25px;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
 }
